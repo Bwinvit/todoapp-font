@@ -1,0 +1,5 @@
+FROM node:18-alpine
+RUN npm install serve -g
+WORKDIR /app
+COPY build/ .
+CMD ["serve", "-p", "80", "-s", "."]
